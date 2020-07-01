@@ -1,7 +1,7 @@
 <h1 align="center">Monaco-Editor-ES</h1>
 
 <div align="center">
-  <a href="https://github.com/vanillaes/monaco-editor-es/releases"><img src="https://badgen.net/github/tag/vanillaes/monaco-editor-es" alt="GitHub Releases"></a>
+  <a href="https://github.com/vanillaes/monaco-editor-es/tags"><img src="https://badgen.net/github/tag/vanillaes/monaco-editor-es" alt="GitHub Tags"></a>
   <a href="https://www.npmjs.com/package/monaco-editor-es"><img src="https://badgen.net/npm/v/monaco-editor-es" alt="NPM Releases"></a>
   <a href="https://github.com/vanillaes/monaco-editor-es/actions"><img src="https://github.com/vanillaes/monaco-editor-es/workflows/Release/badge.svg" alt="Release Status"></a>
 </div>
