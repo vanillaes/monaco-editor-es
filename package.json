@@ -1,0 +1,23 @@
+{
+  "name": "monaco-editor-es",
+  "version": "0.0.0",
+  "description": "Monaco Editor Builds for ESM",
+  "keywords": [
+    "es-module",
+    "esm",
+    "monaco-editor"
+  ],
+  "repository": "https://github.com/vanillaes/monaco-editor-es.git",
+  "author": "Evan Plaice <evanplaice@gmail.com> (https://evanplaice.com/)",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "preversion": "npm run lint",
+    "postversion": "git push --follow-tags"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": "~14"
+  }
+}
