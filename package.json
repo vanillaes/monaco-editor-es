@@ -12,6 +12,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
+    "build": "webpack --config webpack.config.cjs",
     "preversion": "npm run lint",
     "postversion": "git push --follow-tags"
   },
