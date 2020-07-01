@@ -1,6 +1,6 @@
 {
   "name": "monaco-editor-es",
-  "version": "0.18.0",
+  "version": "0.18.1",
   "description": "Monaco Editor Builds for ESM",
   "keywords": [
     "es-module",
