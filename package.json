@@ -3,8 +3,8 @@
   "version": "0.23.0",
   "description": "Monaco Editor Builds for ESM",
   "keywords": [
-    "es-module",
     "esm",
+    "esmodules",
     "monaco-editor"
   ],
   "repository": "https://github.com/vanillaes/monaco-editor-es.git",
