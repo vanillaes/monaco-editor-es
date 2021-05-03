@@ -7,7 +7,7 @@
     "esmodules",
     "monaco-editor"
   ],
-  "repository": "https://github.com/vanillaes/monaco-editor-es.git",
+  "repository": "https://github.com/vanillaes/monaco-editor-es",
   "author": "Evan Plaice <evanplaice@gmail.com> (https://evanplaice.com/)",
   "license": "MIT",
   "type": "module",
