@@ -4,6 +4,8 @@
   <a href="https://github.com/vanillaes/monaco-editor-es/tags"><img src="https://badgen.net/github/tag/vanillaes/monaco-editor-es" alt="GitHub Tags"></a>
   <a href="https://www.npmjs.com/package/monaco-editor-es"><img src="https://badgen.net/npm/v/monaco-editor-es" alt="NPM Release"></a>
   <a href="https://github.com/vanillaes/monaco-editor-es/actions"><img src="https://github.com/vanillaes/monaco-editor-es/workflows/Release/badge.svg" alt="Release Status"></a>
+
+  <a href="https://discord.gg/aSWYgtybzV"><img alt="Discord" src="https://img.shields.io/discord/723296249121603604?color=%23738ADB"></a>
 </div>
 
 ## Installation
