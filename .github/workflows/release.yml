@@ -8,7 +8,6 @@ on:
 jobs:
   npm:
     runs-on: ubuntu-latest
-    needs: check
     steps:
     - name: Checkout
       uses: actions/checkout@v2
