@@ -1,11 +1,12 @@
 <h1 align="center">Monaco-Editor-ES</h1>
 
 <div align="center">
-  <a href="https://github.com/vanillaes/monaco-editor-es/tags"><img src="https://badgen.net/github/tag/vanillaes/monaco-editor-es" alt="GitHub Tags"></a>
-  <a href="https://www.npmjs.com/package/monaco-editor-es"><img src="https://badgen.net/npm/v/monaco-editor-es" alt="NPM Release"></a>
+  <a href="https://github.com/vanillaes/monaco-editor-es/tags"><img src="https://badgen.net/github/tag/vanillaes/monaco-editor-es?cache-control=no-cache" alt="GitHub Tag"></a>
+  <a href="https://www.npmjs.com/package/monaco-editor-es"><img src="https://badgen.net/npm/v/@vanillaes/monaco-editor-es?icon=npm" alt="NPM Version"></a>
+  <a href="https://www.npmjs.com/package/@vanillaes/monaco-editor-es"><img src="https://badgen.net/npm/dm/@vanillaes/monaco-editor-es?icon=npm" alt="NPM Downloads"></a>
+  <a href="https://bundlephobia.com/result?p=@vanillaes/monaco-editor-es"><img src="https://badgen.net/bundlephobia/minzip/@vanillaes/monaco-editor-es" alt="Bundlephobia"></a>
   <a href="https://github.com/vanillaes/monaco-editor-es/actions"><img src="https://github.com/vanillaes/monaco-editor-es/workflows/Release/badge.svg" alt="Release Status"></a>
-
-  <a href="https://discord.gg/aSWYgtybzV"><img alt="Discord" src="https://img.shields.io/discord/723296249121603604?color=%23738ADB"></a>
+  <a href="https://github.com/vanillaes/monaco-editor-es/actions"><img src="https://github.com/vanillaes/monaco-editor-es/workflows/Release/badge.svg" alt="Release Status"></a>
 </div>
 
 ## Installation
