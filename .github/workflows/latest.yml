@@ -1,0 +1,15 @@
+name: Latest
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - package.json
+      - package-lock.json
+
+
+jobs:
+  ci:
+    uses: vanillaes/.github/.github/workflows/verify.yml@main
+

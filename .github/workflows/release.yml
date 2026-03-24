@@ -6,12 +6,15 @@ on:
     - 'v*'
 
 jobs:
-  npm:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Publish
-      run: |
-        echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
-        npm publish --access public
+  ci:
+    uses: vanillaes/.github/.github/workflows/verify.yml@main
+
+  cd-npm:
+    needs: ci
+    uses: vanillaes/.github/.github/workflows/npm.yml@main
+    secrets: inherit
+
+  cd-gh:
+    needs: ci
+    uses: vanillaes/.github/.github/workflows/gh.yml@main
+    secrets: inherit
