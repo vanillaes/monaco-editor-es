@@ -1,0 +1,19 @@
+{
+  "name": "@vanillaes/monaco-editor-es",
+  "version": "0.30.3",
+  "license": "MIT",
+  "publish": {
+    "include": [
+      "bin/**/*.js",
+      "src/**/*.js",
+      "src/**/*.d.ts",
+      "LICENSE",
+      "README.md"
+    ],
+    "exclude": [
+      "**/__tests__/**",
+      "bin/**/*.spec.js",
+      "src/**/*.spec.js"
+    ]
+  }
+}
