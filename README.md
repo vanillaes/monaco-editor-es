@@ -16,30 +16,36 @@ npm i @vanillaes/monaco-editor-es
 
 ## Usage
 
-### Step 1 - Import the script
+### Step 1 - Import the script and styles
 
 ```javascript
-const workersDir = new URL('../node_modules/@vanillaes/monaco-editor-es/dist/workers/', import.meta.url)
+import * as monaco from '../node_modules/@vanillaes/monaco-editor-es/dist/editor.main.js'
+import sheet from '../node_modules/@vanillaes/monaco-editor-es/dist/editor.main.css' with { type: "css" }
+document.adoptedStyleSheets = [sheet]
 ```
 
 ### Step 2 - Define where the workers are located
 
 ```javascript
-const workersDir = new URL('../node_modules/monaco-editor-es/dist/workers/', import.meta.url)
+const workersDir = new URL('../node_modules/@vanillaes/monaco-editor-es/dist/workers/', import.meta.url)
 self.MonacoEnvironment = {
   getWorkerUrl: function (moduleId, label) {
-    switch(label) {
-      case 'json':
-        return `${workersDir}json.worker.js`
+    switch (label) {
       case 'css':
-        return `${workersDir}css.worker.js`
+      case 'less':
+      case 'scss':
+        return `${workersDir}/css.worker.js`
       case 'html':
-        return `${workersDir}html.worker.js`
-      case 'typescript':
+      case 'handlebars':
+      case 'razor':
+        return `${workersDir}/html.worker.js`
       case 'javascript':
-        return `${workersDir}ts.worker.js`
+      case 'typescript':
+        return `${workersDir}/ts.worker.js`
+      case 'json':
+        return `${workersDir}/json.worker.js`
       default:
-        return `${workersDir}editor.worker.js`
+        return `${workersDir}/editor.worker.js`
     }
   }
 }
@@ -49,7 +55,7 @@ self.MonacoEnvironment = {
 
 ```javascript
 monaco.editor.create(document.getElementById('#editor'), {
-  language: 'javascript,
+  language: 'javascript',
   theme: 'vs-dark'
 })
 ```
