@@ -1,35 +1,41 @@
-const path = require('path');
-const webpack = require('webpack');
-const CopyPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin')
+const { join, resolve } = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   mode: 'production',
-  entry: {
-    "editor.main": 'monaco-editor/esm/vs/editor/editor.main',
-    "workers/editor.worker": 'monaco-editor/esm/vs/editor/editor.worker',
-    "workers/json.worker": 'monaco-editor/esm/vs/language/json/json.worker',
-    "workers/css.worker": 'monaco-editor/esm/vs/language/css/css.worker',
-    "workers/html.worker": 'monaco-editor/esm/vs/language/html/html.worker',
-    "workers/ts.worker": 'monaco-editor/esm/vs/language/typescript/ts.worker',
+	entry: {
+		// Package each language's worker and give these filenames in `getWorkerUrl`
+    "editor.main.js": 'monaco-editor/esm/vs/editor/editor.main.js',
+    "workers/editor.worker.js": 'monaco-editor/esm/vs/editor/editor.worker.js',
+    "workers/json.worker.js": 'monaco-editor/esm/vs/language/json/json.worker.js',
+    "workers/css.worker.js": 'monaco-editor/esm/vs/language/css/css.worker.js',
+    "workers/html.worker.js": 'monaco-editor/esm/vs/language/html/html.worker.js',
+    "workers/ts.worker.js": 'monaco-editor/esm/vs/language/typescript/ts.worker.js',
+	},
+  experiments: {
+    outputModule: true,
   },
   output: {
-    globalObject: 'self',
-    filename: '[name].js',
-    path: path.resolve(__dirname),
-    publicPath: "/"
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      },
-      {
-        test: /\.ttf$/,
-        use: ['file-loader']
-      }
-    ]
-  },
+    library: {
+      type: 'modern-module', 
+    },
+		globalObject: 'self',
+		filename: '[name]',
+		path: join(resolve(__dirname), 'dist')
+	},
+	module: {
+		rules: [
+			{
+				test: /\.css$/,
+				use: ['style-loader', 'css-loader']
+			},
+			{
+				test: /\.ttf$/,
+				use: ['file-loader']
+			}
+		]
+	},
   plugins: [
     // don't chunk the output
     new webpack.optimize.LimitChunkCountPlugin({
@@ -41,9 +47,5 @@ module.exports = {
         { from: 'node_modules/monaco-editor/ThirdPartyNotices.txt' },
       ],
     })
-  ],
-  // weird kludge required by css-loader
-  node: {
-    fs: 'empty'
-  }
-};
+  ]
+}

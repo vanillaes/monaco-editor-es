@@ -4,7 +4,6 @@
   <a href="https://github.com/vanillaes/monaco-editor-es/tags"><img src="https://badgen.net/github/tag/vanillaes/monaco-editor-es?cache-control=no-cache" alt="GitHub Tag"></a>
   <a href="https://www.npmjs.com/package/monaco-editor-es"><img src="https://badgen.net/npm/v/@vanillaes/monaco-editor-es?icon=npm" alt="NPM Version"></a>
   <a href="https://www.npmjs.com/package/@vanillaes/monaco-editor-es"><img src="https://badgen.net/npm/dm/@vanillaes/monaco-editor-es?icon=npm" alt="NPM Downloads"></a>
-  <a href="https://bundlephobia.com/result?p=@vanillaes/monaco-editor-es"><img src="https://badgen.net/bundlephobia/minzip/@vanillaes/monaco-editor-es" alt="Bundlephobia"></a>
   <a href="https://github.com/vanillaes/monaco-editor-es/actions"><img src="https://github.com/vanillaes/monaco-editor-es/workflows/Release/badge.svg" alt="Release Status"></a>
   <a href="https://github.com/vanillaes/monaco-editor-es/actions"><img src="https://github.com/vanillaes/monaco-editor-es/workflows/Release/badge.svg" alt="Release Status"></a>
 </div>
@@ -12,7 +11,7 @@
 ## Installation
 
 ```sh
-npm i monaco-editor-es
+npm i @vanillaes/monaco-editor-es
 ```
 
 ## Usage
@@ -20,13 +19,13 @@ npm i monaco-editor-es
 ### Step 1 - Import the script
 
 ```javascript
-import '../node_modules/monaco-editor-es/editor.main.js'
+const workersDir = new URL('../node_modules/@vanillaes/monaco-editor-es/dist/workers/', import.meta.url)
 ```
 
 ### Step 2 - Define where the workers are located
 
 ```javascript
-const workersDir = new URL('../node_modules/monaco-editor-es/workers/', import.meta.url)
+const workersDir = new URL('../node_modules/monaco-editor-es/dist/workers/', import.meta.url)
 self.MonacoEnvironment = {
   getWorkerUrl: function (moduleId, label) {
     switch(label) {
