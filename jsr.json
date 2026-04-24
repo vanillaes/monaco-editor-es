@@ -2,6 +2,9 @@
   "name": "@vanillaes/monaco-editor-es",
   "version": "0.30.4",
   "license": "MIT",
+  "exports": {
+    "./*": "./*"
+  },
   "publish": {
     "include": [
       "bin/**/*.js",

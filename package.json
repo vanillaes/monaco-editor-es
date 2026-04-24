@@ -11,6 +11,9 @@
   "author": "Evan Plaice <evanplaice@gmail.com> (https://evanplaice.com/)",
   "license": "MIT",
   "type": "module",
+  "exports": {
+    "./*": "./*"
+  },
   "scripts": {
     "build": "node lib/build.js",
     "clean": "es clean --custom 'dist/**/*'",
