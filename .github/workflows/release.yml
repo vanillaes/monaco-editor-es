@@ -12,7 +12,6 @@ jobs:
   cd-npm:
     needs: ci
     uses: vanillaes/.github/.github/workflows/npm.yml@main
-    secrets: inherit
 
   cd-gh:
     needs: ci
