@@ -1,6 +1,6 @@
 {
   "name": "@vanillaes/monaco-editor-es",
-  "version": "0.30.2",
+  "version": "0.30.3",
   "description": "Monaco Editor Builds for ESM",
   "keywords": [
     "esm",
