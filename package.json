@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@vanillaes/esmtk": "^2.6.1",
-    "esbuild": "^0.28.0",
+    "esbuild": "^0.28.1",
     "monaco-editor": "^0.55.1"
   }
 }
